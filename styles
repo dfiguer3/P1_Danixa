@@ -3,12 +3,35 @@ body {
     font-family: sans-serif;
 }
 
-
 section {
-    border: 10px solid gray;
-    height: 90vh;
+    padding: 20px;
 }
 
 .container {
-  
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
 }
+
+.translate-icon {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .translate-icon a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: #FEF8E0;
+    color: #3A4A5A;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    border: 1px solid #FEF8E0;
+    transition: background 0.2s ease;
+  }
+  
+  .translate-icon a:hover {
+    background: #E8F1FF;
+  }
