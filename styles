@@ -1,0 +1,13 @@
+.body {
+    background-color: #FEF8E0;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    border: 10px solid gray;
+    height: 90vh;
+}
+
+.container {
+  
+}
