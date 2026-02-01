@@ -35,3 +35,4 @@ section {
   .translate-icon a:hover {
     background: #E8F1FF;
   }
+  
