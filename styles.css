@@ -1,5 +1,5 @@
 body {
-    background-color: #FEF8E0;
+    background-color: #DAE9F2;
     font-family: sans-serif;
 }
 
@@ -23,12 +23,12 @@ section {
     align-items: center;
     gap: 6px;
     padding: 10px 16px;
-    background: #FEF8E0;
+    background: #DAE9F2;
     color: #3A4A5A;
     border-radius: 20px;
     text-decoration: none;
     font-family: sans-serif;
-    border: 1px solid #FEF8E0;
+    border: 1px solid #DAE9F2;
     transition: background 0.2s ease;
   }
   
