@@ -1,9 +1,10 @@
-.body {
+body {
     background-color: #FEF8E0;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
 }
 
-.section {
+
+section {
     border: 10px solid gray;
     height: 90vh;
 }
