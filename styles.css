@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: ;
 }
 
 body {
@@ -19,7 +20,7 @@ section {
     text-align: center;
     padding: 20px;
     color: #9B4F96;
-    background-color: #E8F1FF;
+    background-color: floralwhite;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,6 +49,9 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+
+    /* Outline */ 
+    -webkit-text-stroke: 2px red; /* adjust color/thickness */
 }
 
 .translate-icon {
@@ -60,7 +64,7 @@ section {
     align-items: center;
     gap: 6px;
     padding: 10px 16px;
-    background: #DAE9F2;
+    background: floralwhite;
     color: #3A4A5A;
     border-radius: 20px;
     text-decoration: none;
@@ -70,7 +74,7 @@ section {
   }
   
   .translate-icon a:hover {
-    background: #E8F1FF;
+    background: floralwhite;
   }
   
   /* page 2 */
