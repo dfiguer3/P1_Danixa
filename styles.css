@@ -73,6 +73,23 @@ section {
     background: #E8F1FF;
   }
   
+  /* page 2 */
+  .eatFAM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.eatFAM video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional: shadow */
+}
+
+
   /* page 5 */
   .hapVID {
   display: flex;
