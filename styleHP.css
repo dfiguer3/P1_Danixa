@@ -32,10 +32,6 @@ body {
     mix-blend-mode: screen; /* This can help hide white backgrounds */
 }
 
-.container:hover {
-    animation-play-state: paused;
-}
-
 .translate-btn {
     position: absolute;
     color: floralwhite;
