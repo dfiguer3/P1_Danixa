@@ -1,0 +1,95 @@
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+     font-family: Arial, sans-serif;
+     background: linear-gradient(45deg, sienna, indianred, lightgoldenrodyellow, yellow);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.collage-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Add these styles for all image containers */
+.hands, .sea, .outside, .fam, .play, .love {
+    position: absolute;
+    overflow: hidden;
+}
+
+.hands img, .sea img, .outside img, .fam img, .play img, .love img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+        /* Large ocean image - top left */
+.sea {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 55%;
+    filter: blur(2px);
+
+}
+
+        /* Small portrait image - left side */
+.outside {
+    top: 60%;
+    left: 2%;
+    width: 18%;
+    height: 15%;
+}
+
+        /* Small camera/tripod image - bottom left area */
+.hands {
+    top: 70%;
+    left: 21%;
+    width: 12%;
+    height: 18%;
+}
+
+        /* Small face/lips image - center */
+.fam {
+    top: 30%;
+    left: 21%;
+    width: 23%;
+    height: 28%;
+}
+
+        /* Small stacked images - top right */
+.love {
+    top: 8%;
+    right: 22%;
+    width: 10%;
+    height: 15%;
+    filter: blur(2px);
+}
+
+        /* Large pool/water image - bottom right */
+.play {
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 60%;
+}

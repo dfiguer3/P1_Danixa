@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: floralwhite;
+
+@font-face {
+    font-family: 'Solitus';
+    src: url('assets/font/Solitus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;  /* Add this */
+    height: 400px; /* Add this */
+    filter: blur(2px);
+    animation: spin 5s linear infinite;
+}
+
+.container img {
+    width: 100%;      /* Make image fit container */
+    height: 100%;     /* Make image fit container */
+    object-fit: contain; /* Maintain aspect ratio */
+    mix-blend-mode: screen; /* This can help hide white backgrounds */
+}
+
+.container:hover {
+    animation-play-state: paused;
+}
+
+.translate-btn {
+    position: absolute;
+    color: floralwhite;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Solitus', sans-serif;
+    cursor: pointer;
+    z-index: 1;
+    padding: 12px 24px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,27 @@
+%!Adobe-FontList 1.25
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Milkman
+FamilyName:Milkman
+StyleName:Light 
+FullName:Milkman  
+MenuName:Milkman
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\milkman.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:54448
+FileModTime:1770464637
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Milkman  
+NameArray:0,Win,1,Milkman
+%EndFont
+
