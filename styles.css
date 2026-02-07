@@ -49,9 +49,6 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-
-    /* Outline */ 
-    -webkit-text-stroke: 2px red; /* adjust color/thickness */
 }
 
 .translate-icon {
