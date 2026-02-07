@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #DAE9F2;
     font-family: sans-serif;
+    margin: 0; /* Removes the gap at the top */
+    padding-top: 80px; /* Prevents content from hiding under the fixed header */
 }
 
 section {
@@ -8,15 +15,39 @@ section {
 }
 
 .header {
-    font-family: sans-serif;
+    font-family: 'Milkman', sans-serif;
     text-align: center;
     padding: 20px;
+    color: #9B4F96;
+    background-color: #E8F1FF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Add this */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px; /* Soft rounded bottom edges */
+    margin: 0; /* Add this to remove the gap */
 }
 
 .container {
     max-width: 700px;
     margin: auto;
     padding: 20px;
+}
+
+.image-text {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    background-image: url('assets/together.jpg');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .translate-icon {
@@ -42,3 +73,17 @@ section {
     background: #E8F1FF;
   }
   
+  /* page 5 */
+  .hapVID {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.hapVID iframe {
+  max-width: 100%;
+  border-radius: 10px;
+}
