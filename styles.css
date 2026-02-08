@@ -9,6 +9,12 @@ body {
     font-family: sans-serif;
     margin: 0; /* Removes the gap at the top */
     padding-top: 80px; /* Prevents content from hiding under the fixed header */
+    @font-face {
+    font-family: 'Solitus';
+    src: url('assets/font/Solitus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 }
 
 section {
@@ -66,7 +72,7 @@ section {
     border-radius: 20px;
     text-decoration: none;
     font-family: sans-serif;
-    border: 1px solid #DAE9F2;
+    border: 1px solid floralwhite;
     transition: background 0.2s ease;
   }
   
@@ -90,6 +96,16 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional: shadow */
 }
 
+
+  /* page 4 */
+  .music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+}
 
   /* page 5 */
   .hapVID {
