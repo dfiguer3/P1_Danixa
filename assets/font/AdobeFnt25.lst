@@ -4,6 +4,82 @@
 %BeginFont
 Handler:DirectoryHandler
 FontType:TrueType
+FontName:PhospheneFont-Regular
+FamilyName:Phosphène Font
+StyleName:Regular
+FullName:Phosphene Font Regular
+MenuName:Phosphène Font
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\PhospheneFont-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:45364
+FileModTime:1770465224
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Phosphene Font Regular
+NameArray:0,Win,1,Phosphène Font
+NameArray:0,Win,16,Phosphène Font
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Saint-Regular
+FamilyName:Saint
+StyleName:Regular
+FullName:Saint Regular
+MenuName:Saint
+StyleBits:0
+FamilyNameNative:Saint
+StyleNameNative:Regular
+FullNameNative:Saint Regular
+WritingScript:Cyrillic
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\Saint Regular.ttf
+DataFormat:sfntData
+hasSVG:yes
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:72824
+FileModTime:1770465363
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Saint Regular
+NameArray:0,Win,1,Saint
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Solitus
+FamilyName:Solitus
+StyleName:Regular
+FullName:Solitus
+MenuName:Solitus
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\Solitus.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:33804
+FileModTime:1770465577
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Solitus
+NameArray:0,Win,1,Solitus
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
 FontName:Milkman
 FamilyName:Milkman
 StyleName:Light 
