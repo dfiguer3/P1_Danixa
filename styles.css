@@ -71,7 +71,7 @@ section {
     color: #3A4A5A;
     border-radius: 20px;
     text-decoration: none;
-    font-family: 'YoungSerif-Regular', serif;
+    font-family: 'YoungSerif-Bold', serif;
     border: 1px solid floralwhite;
     transition: all 0.3s ease;
   }
@@ -107,6 +107,26 @@ section {
   padding: 20px;
   margin: 20px auto;
   max-width: 100%;
+}
+
+ /* page 8 */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Keeps it behind content */
+  overflow-y: scroll;
+  overflow: auto; /* Allows scrolling within the background */
+}
+
+.background-container img {
+  display: block;
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  min-height: 100%;
+  object-fit: contain; /* Ensures nothing is cut off */
 }
 
   /* end page */
