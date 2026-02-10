@@ -2,16 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: ;
 }
 
 body {
-    font-family: sans-serif;
-    margin: 0; /* Removes the gap at the top */
+    font-family: 'YoungSerif-Regular', serif;
+    margin: 0;
     padding-top: 80px; /* Prevents content from hiding under the fixed header */
     @font-face {
-    font-family: 'Solitus';
-    src: url('assets/font/Solitus.ttf') format('truetype');
+    font-family: 'YoungSerif-Regular';
+    src: url('assets/font/YS/YoungSerif-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,7 +21,7 @@ section {
 }
 
 .header {
-    font-family: 'Milkman', sans-serif;
+    font-family: 'YoungSerif-Bold', serif;
     text-align: center;
     padding: 20px;
     color: #9B4F96;
@@ -34,8 +33,8 @@ section {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 20px 20px; /* Soft rounded bottom edges */
-    margin: 0; /* Add this to remove the gap */
+    border-radius: 0 0 20px 20px;
+    margin: 0;
 }
 
 .container {
@@ -48,7 +47,7 @@ section {
 .image-text {
     font-size: 18px;
     font-weight: bolder;
-    font-family: sans-serif;
+    font-family: 'YoungSerif-Regular', serif;
     background-image: url('assets/together.jpg');
     background-size: cover;
     background-position: center;
@@ -72,13 +71,15 @@ section {
     color: #3A4A5A;
     border-radius: 20px;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'YoungSerif-Regular', serif;
     border: 1px solid floralwhite;
-    transition: background 0.2s ease;
+    transition: all 0.3s ease;
   }
   
   .translate-icon a:hover {
     background: floralwhite;
+    transform: translateY(-2px); /* Optional: subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
   }
   
   /* page 2 */
@@ -93,8 +94,8 @@ section {
 .eatFAM video {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* optional: rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional: shadow */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -108,17 +109,56 @@ section {
   max-width: 100%;
 }
 
-  /* page 5 */
-  .hapVID {
+  /* end page */
+  .endpg {
+  justify-content: flex-start; /* Start from top instead of center */
+  min-height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 100%;
+  padding: 100px 20px 60px; /* Control spacing with padding */
 }
 
-.hapVID iframe {
-  max-width: 100%;
-  border-radius: 10px;
+ .ENDheader {
+  font-family: 'YoungSerif-Bold', serif;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  color: floralwhite;
+}
+
+.endtext {
+  font-family: 'YoungSerif-Regular', serif;
+  color: floralwhite;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.ENDtranslate-icon {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.ENDtranslate-icon a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: transparent;
+  color: floralwhite;
+  border: 1px solid floralwhite 0.3; /* Faint outline */
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'YoungSerif-Bold', serif;
+  transition: all 0.3s ease; /* Changed to 'all' to transition multiple properties */
+}
+
+.ENDtranslate-icon a:hover {
+  background: rgba(255, 250, 240, 0.6); /* Faint floralwhite color */
+  border-color: rgba(58, 74, 90, 0.5); /* Slightly stronger outline on hover */
+  transform: translateY(-2px); /* Optional: subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }

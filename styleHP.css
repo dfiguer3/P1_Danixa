@@ -7,8 +7,8 @@ body {
     background-color: floralwhite;
 
 @font-face {
-    font-family: 'Solitus';
-    src: url('assets/font/Solitus.ttf') format('truetype');
+    font-family: 'YoungSerif-Regular';
+    src: url('assets/font/YS/YoungSerif-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,7 +40,7 @@ body {
     border-radius: 20px;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Solitus', sans-serif;
+    font-family: 'YoungSerif-Bold', serif;
     cursor: pointer;
     z-index: 1;
     padding: 12px 24px;
