@@ -1,6 +1,6 @@
 @font-face {
 font-family: 'PPFrama-Regular';
-src: url('assets/font/frama/PPFrama-Regular.otf') format('open type');
+src: url('assets/font/frama/PPFrama-Regular.otf') format('opentype');
 font-weight: normal;
 font-style: normal;
 }
@@ -110,6 +110,23 @@ section {
   max-width: 100%;
 }
 
+/* page 6 */
+.logos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.logos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
  /* page 8 */
 .background-container {
   position: absolute;
@@ -131,6 +148,11 @@ section {
 }
 
 /* page 8   record player */
+.music-player {
+    justify-content: center;
+    align-items: left;
+}
+
 .record {
     position: relative;
     display: flex;

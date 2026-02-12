@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'PPFrama-RegularPPFrama-Black';
+    src: url('assets/font/frama/PPFrama-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -5,13 +12,6 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: floralwhite;
-
-@font-face {
-    font-family: 'YoungSerif-Regular';
-    src: url('assets/font/YS/YoungSerif-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 }
 
 .container {
@@ -40,7 +40,7 @@ body {
     border-radius: 20px;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'YoungSerif-Bold', serif;
+    font-family: 'PPFrama-Black', sans-serif;
     cursor: pointer;
     z-index: 1;
     padding: 12px 24px;
