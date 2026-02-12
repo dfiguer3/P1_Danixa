@@ -3,6 +3,33 @@
 
 %BeginFont
 Handler:DirectoryHandler
+FontType:Type1
+FontName:Cakra-Normal
+FamilyName:Cakra
+StyleName:Normal
+FullName:Cakra Normal
+MenuName:Cakra Normal
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\Cakra-Normal.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:291544
+FileModTime:1770747884
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Cakra Normal
+NameArray:0,Win,1,Cakra Normal
+NameArray:0,Win,16,Cakra
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
 FontType:TrueType
 FontName:PhospheneFont-Regular
 FamilyName:Phosphène Font
@@ -75,6 +102,402 @@ WidthClass:5
 AngleClass:0
 NameArray:0,Mac,4,Solitus
 NameArray:0,Win,1,Solitus
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-Bold
+FamilyName:Young Serif
+StyleName:Bold
+FullName:Young Serif Bold
+MenuName:Young Serif
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:231084
+FileModTime:1770710067
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-BoldItalic
+FamilyName:Young Serif
+StyleName:Bold Italic
+FullName:Young Serif Bold Italic
+MenuName:Young Serif
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:238176
+FileModTime:1770710067
+WeightClass:700
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-Light
+FamilyName:Young Serif
+StyleName:Light
+FullName:Young Serif Light
+MenuName:Young Serif Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:224860
+FileModTime:1770710067
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Young Serif Light
+NameArray:0,Win,16,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-LightItalic
+FamilyName:Young Serif
+StyleName:Light Italic
+FullName:Young Serif Light Italic
+MenuName:Young Serif Light
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-LightItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:231716
+FileModTime:1770710067
+WeightClass:300
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Young Serif Light
+NameArray:0,Win,16,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-Medium
+FamilyName:Young Serif
+StyleName:Medium
+FullName:Young Serif Medium
+MenuName:Young Serif Medium
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:227124
+FileModTime:1770710067
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Young Serif Medium
+NameArray:0,Win,16,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-MediumItalic
+FamilyName:Young Serif
+StyleName:Medium Italic
+FullName:Young Serif Medium Italic
+MenuName:Young Serif Medium
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-MediumItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:233680
+FileModTime:1770710067
+WeightClass:500
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Young Serif Medium
+NameArray:0,Win,16,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-Regular
+FamilyName:Young Serif
+StyleName:Regular
+FullName:Young Serif Regular
+MenuName:Young Serif
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:229252
+FileModTime:1770710067
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:YoungSerif-Italic
+FamilyName:Young Serif
+StyleName:Italic
+FullName:Young Serif Italic
+MenuName:Young Serif
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\YS\YoungSerif-RegularItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:235692
+FileModTime:1770710067
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Young Serif
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFrama-Black
+FamilyName:PP Frama
+StyleName:Black
+FullName:PP Frama Black
+MenuName:PP Frama Black
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFrama-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:77728
+FileModTime:1770754752
+WeightClass:900
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,PP Frama Black
+NameArray:0,Win,16,PP Frama
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFrama-BlackItalic
+FamilyName:PP Frama
+StyleName:Black Italic
+FullName:PP Frama Black Italic
+MenuName:PP Frama Black
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFrama-BlackItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:81040
+FileModTime:1770754752
+WeightClass:900
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,PP Frama Black
+NameArray:0,Win,16,PP Frama
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFrama-Extralight
+FamilyName:PP Frama
+StyleName:Extralight
+FullName:PP Frama Extralight
+MenuName:PP Frama Extralight
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFrama-Extralight.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:82092
+FileModTime:1770754752
+WeightClass:200
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,PP Frama Extralight
+NameArray:0,Win,16,PP Frama
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFrama-ExtralightItalic
+FamilyName:PP Frama
+StyleName:Extralight Italic
+FullName:PP Frama Extralight Italic
+MenuName:PP Frama Extralight
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFrama-ExtralightItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:86024
+FileModTime:1770754752
+WeightClass:200
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,PP Frama Extralight
+NameArray:0,Win,16,PP Frama
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFrama-Regular
+FamilyName:PP Frama
+StyleName:Regular
+FullName:PP Frama
+MenuName:PP Frama
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFrama-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:81840
+FileModTime:1770754752
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,PP Frama
+NameArray:0,Win,16,PP Frama
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFrama-RegularItalic
+FamilyName:PP Frama
+StyleName:Regular Italic
+FullName:PP Frama Regular Italic
+MenuName:PP Frama
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFrama-RegularItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:84588
+FileModTime:1770754752
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,PP Frama
+NameArray:0,Win,16,PP Frama
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFramaText-Regular
+FamilyName:PP Frama Text
+StyleName:Regular
+FullName:PP Frama Text
+MenuName:PP Frama Text
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFramaText-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:83616
+FileModTime:1770754752
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,PP Frama Text
+NameArray:0,Win,16,PP Frama Text
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPFramaText-RegularItalic
+FamilyName:PP Frama Text
+StyleName:Regular Italic
+FullName:PP Frama Text Regular Italic
+MenuName:PP Frama Text
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\frama\PPFramaText-RegularItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:86852
+FileModTime:1770754752
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,PP Frama Text
+NameArray:0,Win,16,PP Frama Text
 %EndFont
 
 %BeginFont
