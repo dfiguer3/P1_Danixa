@@ -136,14 +136,13 @@ section {
     align-items: center;
     width: 400px;
     height: 400px;
-    animation: spin 5s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
 .record img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    mix-blend-mode: screen;
 }
 
 @keyframes spin {
@@ -153,7 +152,6 @@ section {
     to {
         transform: rotate(360deg);
     }
-}
 
   /* end page */
   .endpg {
