@@ -14,7 +14,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-}
 
 section {
     padding: 20px;
@@ -129,15 +128,42 @@ section {
   object-fit: contain; /* Ensures nothing is cut off */
 }
 
+/* page 8   record player */
+.record {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    animation: spin 5s linear infinite;
+}
+
+.record img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
   /* end page */
   .endpg {
-  justify-content: flex-start; /* Start from top instead of center */
+  justify-content: flex-start;
   min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 20px 60px; /* Control spacing with padding */
+  padding: 100px 20px 60px;
 }
 
  .ENDheader {
@@ -169,16 +195,16 @@ section {
   padding: 10px 16px;
   background: transparent;
   color: floralwhite;
-  border: 1px solid floralwhite 0.3; /* Faint outline */
+  border: 1px solid floralwhite 0.3;
   border-radius: 20px;
   text-decoration: none;
   font-family: 'YoungSerif-Bold', serif;
-  transition: all 0.3s ease; /* Changed to 'all' to transition multiple properties */
+  transition: all 0.3s ease;
 }
 
 .ENDtranslate-icon a:hover {
-  background: rgba(255, 250, 240, 0.6); /* Faint floralwhite color */
-  border-color: rgba(58, 74, 90, 0.5); /* Slightly stronger outline on hover */
-  transform: translateY(-2px); /* Optional: subtle lift effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  background: rgba(255, 250, 240, 0.6);
+  border-color: rgba(58, 74, 90, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
