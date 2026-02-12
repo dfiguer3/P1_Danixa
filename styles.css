@@ -1,3 +1,10 @@
+@font-face {
+font-family: 'PPFrama-Regular';
+src: url('assets/font/frama/PPFrama-Regular.otf') format('open type');
+font-weight: normal;
+font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +14,7 @@
 body {
     font-family: 'PPFrama-Regular', serif;
     margin: 0;
-    padding-top: 80px; /* Prevents content from hiding under the fixed header */
-    @font-face {
-    font-family: 'PPFrama-Regular';
-    src: url('assets/font/frama/PPFrama-Regular.otf') format('open type');
-    font-weight: normal;
-    font-style: normal;
+    padding-top: 80px;
 }
 
 section {
@@ -133,9 +135,10 @@ section {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 400px;
+    align-items: left;
+    left: -300px;
+    width: 600px;
+    height: 600px;
     animation: spin 2s linear infinite;
 }
 
@@ -152,6 +155,7 @@ section {
     to {
         transform: rotate(360deg);
     }
+}
 
   /* end page */
   .endpg {
