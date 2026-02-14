@@ -1,90 +1,90 @@
 @font-face {
-font-family: 'PPFrama-Regular';
-src: url('assets/font/frama/PPFrama-Regular.otf') format('opentype');
-font-weight: normal;
-font-style: normal;
+  font-family: 'PPFrama-Regular';
+  src: url('./fonts/PPFrama-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'PPFrama-Regular', serif;
-    margin: 0;
-    padding-top: 80px;
+  font-family: 'PPFrama-Regular', serif;
+  margin: 0;
+  padding-top: 80px;
 }
 
 section {
-    padding: 20px;
+  padding: 20px;
 }
 
 .header {
-    font-family: 'PPFrama-Black', serif;
-    text-align: center;
-    padding: 20px;
-    color: #9B4F96;
-    background-color: floralwhite;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; /* Add this */
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 20px 20px;
-    margin: 0;
+  font-family: 'PPFrama-Regular', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #9B4F96;
+  background-color: floralwhite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 20px 20px;
+  margin: 0;
 }
 
 .container {
-    max-width: 700px;
-    margin: auto;
-    padding: 50px;
-    text-align: center;
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
 }
 
 .image-text {
-    font-size: 18px;
-    font-weight: bolder;
-    font-family: 'PPFrama-Regular', serif;
-    background-image: url('assets/together.jpg');
-    background-size: cover;
-    background-position: center;
-    background-clip: text;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: 'PPFrama-Regular', sans-serif;
+  background-image: url('assets/together.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+  color: transparent;
 }
 
 .translate-icon {
-    text-align: center;
-    margin: 40px 0;
+  text-align: center;
+  margin: 40px 0;
   }
   
-  .translate-icon a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 16px;
-    background: floralwhite;
-    color: #3A4A5A;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: 'PPFrama-Black', serif;
-    border: 1px solid floralwhite;
-    transition: all 0.3s ease;
+.translate-icon a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: floralwhite;
+  color: #3A4A5A;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'PPFrama-Black', sans-serif;
+  border: 1px solid floralwhite;
+  transition: all 0.3s ease;
   }
   
-  .translate-icon a:hover {
-    background: floralwhite;
-    transform: translateY(-2px); /* Optional: subtle lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+.translate-icon a:hover {
+  background: floralwhite;
+  transform: translateY(-2px); /* Optional: subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
   }
   
-  /* page 2 */
-  .eatFAM {
+  /* PAGE 2 */////////////////////////////
+.eatFAM {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,8 +100,8 @@ section {
 }
 
 
-  /* page 4 */
-  .music {
+  /* PAGE 4 */////////////////////////////
+.music {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,31 +110,30 @@ section {
   max-width: 100%;
 }
 
-/* page 6 */
+/* PAGE 6 */////////////////////////////
 .logos {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
 
 .logos img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
- /* page 8 */
+ /* PAGE 8 */////////////////////////////
 .background-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   overflow-y: scroll;
   overflow: auto;
 }
@@ -147,27 +146,48 @@ section {
   object-fit: contain;
 }
 
-/* page 8   record player */
-.music-player {
+/* Main container - centered vertical layout */
+.split-container {
+    display: flex;
+    flex-direction: column;  /* ✅ Stack vertically instead of horizontal */
+    align-items: center;
     justify-content: center;
-    align-items: left;
+    gap: 30px;
+    padding: 10px 10px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+
+/* Top - Spinning record (centered) */
+.left-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 400px;   /* Adjust size as needed */
+    height: 400px;
 }
 
 .record {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: left;
-    left: -300px;
-    width: 600px;
-    height: 600px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     animation: spin 2s linear infinite;
+    transition: animation-duration 0.5s ease-in ease;
 }
 
 .record img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.record:hover {
+    animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
@@ -179,8 +199,111 @@ section {
     }
 }
 
-  /* end page */
-  .endpg {
+/* Bottom - Music buttons (horizontal row like color swatches) */
+.music-buttons {
+    display: flex;
+    flex-direction: row;  /* ✅ Horizontal row */
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  /* Wraps on smaller screens */
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Image button styling - circular like color swatches */
+.button-wrapper {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.button-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.button-wrapper img {
+    width: 50px;   /* Circular size like color swatches */
+    height: 50px;
+    border-radius: 50%;  /* ✅ Circular */
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+/* Active state when selected */
+input[type="radio"]:checked + .button-wrapper img {
+    border-color: lightblue;
+    box-shadow: 0 0 20px lightblue;
+    transform: scale(1.05);
+}
+
+/* Song title above image (like hex codes) */
+.button-wrapper span {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;  /* ✅ Above the image */
+    font-family: 'PPFrama-Regular', sans-serif;
+    color: #3A4A5A;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Audio player */
+.audio-player {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    z-index: 1000;
+}
+
+#song1:checked ~ .audio-player.player1,
+#song2:checked ~ .audio-player.player2,
+#song3:checked ~ .audio-player.player3,
+#song4:checked ~ .audio-player.player4 {
+    display: block;
+}
+
+audio {
+    width: 300px;
+}
+
+.now-playing {
+    font-family: 'PPFrama-Regular', sans-serif;
+    color: #9B4F96;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .split-container {
+        gap: 40px;
+        padding: 80px 20px 20px;
+    }
+    
+    .left-image {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .button-wrapper img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+  /* END PAGE */////////////////////////////
+.endpg {
   justify-content: flex-start;
   min-height: auto;
   display: flex;
@@ -190,7 +313,7 @@ section {
   padding: 100px 20px 60px;
 }
 
- .ENDheader {
+.ENDheader {
   font-family: 'PPFrama-Regular', serif;
   text-align: center;
   justify-content: center;
