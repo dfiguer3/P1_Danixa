@@ -199,22 +199,29 @@ section {
     }
 }
 
-/* Bottom - Music buttons (horizontal row like color swatches) */
+/* Hide radio buttons but keep them functional */
+.split-container > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Bottom - Music buttons */
 .music-buttons {
     display: flex;
-    flex-direction: row;  /* ✅ Horizontal row */
+    flex-direction: row;
     gap: 30px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;  /* Wraps on smaller screens */
+    flex-wrap: wrap;
 }
 
-/* Hide radio buttons */
-input[type="radio"] {
-    display: none;
+/* Label styling */
+.music-buttons label {
+    cursor: pointer;
 }
 
-/* Image button styling - circular like color swatches */
+/* Image button styling */
 .button-wrapper {
     position: relative;
     cursor: pointer;
@@ -222,30 +229,46 @@ input[type="radio"] {
     text-align: center;
 }
 
+.button-wrapper:hover .play-overlay {
+    opacity: 1;
+}
+
 .button-wrapper:hover {
     transform: translateY(-5px);
 }
 
 .button-wrapper img {
-    width: 50px;   /* Circular size like color swatches */
+    width: 50px;
     height: 50px;
-    border-radius: 50%;  /* ✅ Circular */
+    border-radius: 50%;
+    border: 3px solid transparent;
     transition: all 0.3s ease;
     object-fit: cover;
 }
 
-/* Active state when selected */
-input[type="radio"]:checked + .button-wrapper img {
+/* Active state when selected - targets labels connected to checked inputs */
+#song1:checked ~ .music-buttons label[for="song1"] .button-wrapper img,
+#song2:checked ~ .music-buttons label[for="song2"] .button-wrapper img,
+#song3:checked ~ .music-buttons label[for="song3"] .button-wrapper img,
+#song4:checked ~ .music-buttons label[for="song4"] .button-wrapper img {
     border-color: lightblue;
     box-shadow: 0 0 20px lightblue;
     transform: scale(1.05);
 }
 
-/* Song title above image (like hex codes) */
+/* Hide play overlay when song is selected */
+#song1:checked ~ .music-buttons label[for="song1"] .play-overlay,
+#song2:checked ~ .music-buttons label[for="song2"] .play-overlay,
+#song3:checked ~ .music-buttons label[for="song3"] .play-overlay,
+#song4:checked ~ .music-buttons label[for="song4"] .play-overlay {
+    display: none;
+}
+
+/* Song title above image */
 .button-wrapper span {
     display: block;
     text-align: center;
-    margin-bottom: 10px;  /* ✅ Above the image */
+    margin-bottom: 10px;
     font-family: 'PPFrama-Regular', sans-serif;
     color: #3A4A5A;
     font-size: 12px;
@@ -253,17 +276,49 @@ input[type="radio"]:checked + .button-wrapper img {
     letter-spacing: 1px;
 }
 
-/* Audio player */
+/* Play overlay */
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(155, 79, 150, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Play icon */
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 15px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 3px;
+}
+
+/* Audio player - FIXED SELECTORS */
 .audio-player {
     display: none;
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    background: floralwhite;
     padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
+/* ✅ FIXED: Now targets inputs as siblings */
 #song1:checked ~ .audio-player.player1,
 #song2:checked ~ .audio-player.player2,
 #song3:checked ~ .audio-player.player3,
@@ -296,6 +351,11 @@ audio {
     }
     
     .button-wrapper img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .play-overlay {
         width: 80px;
         height: 80px;
     }
