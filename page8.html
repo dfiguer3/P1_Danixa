@@ -16,98 +16,97 @@
     </h1>
   
 
-    <div class="split-container">
+  <div class="split-container">
         
-        <!-- LEFT SIDE - Spinning Record -->
-        <div class="left-image">
-            <div class="record">
-                <img src="assets/earth record.png" alt="record">
+    <!-- LEFT SIDE - Spinning Record -->
+    <div class="left-image">
+        <div class="record">
+            <img src="assets/earth record.png" alt="record">
+        </div>
+    </div>
+
+    <!-- ✅ RADIO INPUTS MOVED HERE (before music-buttons) -->
+    <input type="radio" name="music" id="song1">
+    <input type="radio" name="music" id="song2">
+    <input type="radio" name="music" id="song3">
+    <input type="radio" name="music" id="song4">
+
+  <!-- BOTTOM - Music Buttons -->
+  <div class="music-buttons">
+            
+    <!-- Button 1 -->
+    <label for="song1">
+        <div class="button-wrapper">
+            <span>Reggaeton</span>
+            <img src="assets/endless butterfly.png" alt="Song 1">
+            <div class="play-overlay">
+                <div class="play-icon"></div>
             </div>
         </div>
+    </label>
 
-        <!-- ✅ RADIO INPUTS MOVED HERE (before music-buttons) -->
-        <input type="radio" name="music" id="song1">
-        <input type="radio" name="music" id="song2">
-        <input type="radio" name="music" id="song3">
-        <input type="radio" name="music" id="song4">
-
-        <!-- BOTTOM - Music Buttons -->
-        <div class="music-buttons">
-            
-            <!-- Button 1 -->
-            <label for="song1">
-                <div class="button-wrapper">
-                    <span>Reggaeton</span>
-                    <img src="assets/endless butterfly.png" alt="Song 1">
-                    <div class="play-overlay">
-                        <div class="play-icon"></div>
-                    </div>
+        <!-- Button 2 -->
+        <label for="song2">
+            <div class="button-wrapper">
+                <span>K-Pop</span>
+                <img src="assets/endless flower (1).png" alt="Song 2">
+                <div class="play-overlay">
+                    <div class="play-icon"></div>
                 </div>
-            </label>
+            </div>
+        </label>
 
-            <!-- Button 2 -->
-            <label for="song2">
-                <div class="button-wrapper">
-                    <span>K-Pop</span>
-                    <img src="assets/endless flower (1).png" alt="Song 2">
-                    <div class="play-overlay">
-                        <div class="play-icon"></div>
-                    </div>
+        <!-- Button 3 -->
+        <label for="song3">
+            <div class="button-wrapper">
+                <span>Pop</span>
+                <img src="assets/endless PurpFlower.png" alt="Song 3">
+                <div class="play-overlay">
+                    <div class="play-icon"></div>
                 </div>
-            </label>
+            </div>
+        </label>
 
-            <!-- Button 3 -->
-            <label for="song3">
-                <div class="button-wrapper">
-                    <span>Pop</span>
-                    <img src="assets/endless PurpFlower.png" alt="Song 3">
-                    <div class="play-overlay">
-                        <div class="play-icon"></div>
-                    </div>
+        <!-- Button 4 -->
+        <label for="song4">
+            <div class="button-wrapper">
+                <span>Reggae</span>
+                <img src="assets/endless monster.png" alt="Song 4">
+                <div class="play-overlay">
+                    <div class="play-icon"></div>
                 </div>
-            </label>
+            </div>
+        </label>
+    </div>
 
-            <!-- Button 4 -->
-            <label for="song4">
-                <div class="button-wrapper">
-                    <span>Reggae</span>
-                    <img src="assets/endless monster.png" alt="Song 4">
-                    <div class="play-overlay">
-                        <div class="play-icon"></div>
-                    </div>
-                </div>
-            </label>
+  <!-- Audio Players -->
+       <div class="audio-player player1">
+           <div class="now-playing">🎵 Now Playing: Reggaeton</div>
+           <audio controls>
+               <source src="audio/envolver.mp3" type="audio/mpeg">
+           </audio>
+       </div>
 
-        </div>
+       <div class="audio-player player2">
+           <div class="now-playing">🎵 Now Playing: K-Pop</div>
+           <audio controls>
+               <source src="audio/twice.mp3" type="audio/mpeg">
+           </audio>
+       </div>
 
-        <!-- Audio Players -->
-        <div class="audio-player player1">
-            <div class="now-playing">🎵 Now Playing: Reggaeton</div>
-            <audio controls>
-                <source src="audio/envolver.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+       <div class="audio-player player3">
+           <div class="now-playing">🎵 Now Playing: Pop</div>
+           <audio controls>
+               <source src="audio/whitechicks.mp3" type="audio/mpeg">
+           </audio>
+       </div>
 
-        <div class="audio-player player2">
-            <div class="now-playing">🎵 Now Playing: K-Pop</div>
-            <audio controls>
-                <source src="audio/twice.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="audio-player player3">
-            <div class="now-playing">🎵 Now Playing: Pop</div>
-            <audio controls>
-                <source src="audio/whitechicks.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="audio-player player4">
-            <div class="now-playing">🎵 Now Playing: Reggae</div>
-            <audio controls>
-                <source src="audio/bobmarley.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+       <div class="audio-player player4">
+           <div class="now-playing">🎵 Now Playing: Reggae</div>
+           <audio controls>
+               <source src="audio/bobmarley.mp3" type="audio/mpeg">
+           </audio>
+       </div>
 
     <div class="translate-icon">
         <a href="lastpage.html">Next Page ></a>
