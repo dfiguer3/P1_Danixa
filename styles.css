@@ -149,7 +149,7 @@ section {
 /* Main container - centered vertical layout */
 .split-container {
     display: flex;
-    flex-direction: column;  /* ✅ Stack vertically instead of horizontal */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -165,7 +165,7 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 400px;   /* Adjust size as needed */
+    width: 400px;
     height: 400px;
 }
 
@@ -382,7 +382,7 @@ audio {
 }
 
 .endtext {
-  font-family: 'PPFrama-Regular', serif;
+  font-family: 'PPFrama-Regular', sans-serif;
   color: floralwhite;
   max-width: 700px;
   margin: auto;
@@ -405,7 +405,7 @@ audio {
   border: 1px solid floralwhite 0.3;
   border-radius: 20px;
   text-decoration: none;
-  font-family: 'PPFrama-Black', serif;
+  font-family: 'PPFrama-Black', sans-serif;
   transition: all 0.3s ease;
 }
 
