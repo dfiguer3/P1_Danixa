@@ -374,7 +374,7 @@ audio {
 }
 
 .ENDheader {
-  font-family: 'PPFrama-Regular', serif;
+  font-family: 'PPFrama-Regular', sans-serif;
   text-align: center;
   justify-content: center;
   padding: 15px;
