@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'PPFrama-Regular';
-  src: url('./fonts/PPFrama-Regular.otf') format('opentype');
+  src: url('/P1_Danixa/fonts/PPFrama-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,6 +45,69 @@ section {
   text-align: center;
 }
 
+/* BUTTONS*/////////////////////////////
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;  /* auto for horizontal centering */
+  margin-left: 0 !important;  /* override any inherited margins */
+  margin-right: 0 !important;
+}
+
+.Button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: transparent;
+  color: black;
+  border: 1px solid rgba(255, 250, 240, 0.3);
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'PPFrama-Black', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.Button a:hover {
+  background: rgba(255, 250, 240, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+/* PAGE 1 CONNECT THE DOTS*/////////////////////////////
+
+/* PAGE 2 NOSTALGIA*/////////////////////////////
+.header {
+  font-family: 'PPFrama-Regular', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #9B4F96;
+  background-color: floralwhite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 20px 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
 .image-text {
   font-size: 18px;
   font-weight: bolder;
@@ -58,76 +121,111 @@ section {
   color: transparent;
 }
 
-.translate-icon {
-  text-align: center;
-  margin: 40px 0;
-  }
-  
-.translate-icon a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  background: floralwhite;
-  color: #3A4A5A;
-  border-radius: 20px;
-  text-decoration: none;
-  font-family: 'PPFrama-Black', sans-serif;
-  border: 1px solid floralwhite;
-  transition: all 0.3s ease;
-  }
-  
-.translate-icon a:hover {
-  background: floralwhite;
-  transform: translateY(-2px); /* Optional: subtle lift effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-  }
-  
-  /* PAGE 2 */////////////////////////////
-.eatFAM {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-  max-width: 100%;
+.glasses {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.eatFAM video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+/* PAGE 3 LOVE */////////////////////////////
+
+/* PAGE 4 JOY */////////////////////////////
+
+/* PAGE 5 PRIDE */////////////////////////////
 
 
-  /* PAGE 4 */////////////////////////////
-.music {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 100%;
-}
 
-/* PAGE 6 */////////////////////////////
-.logos {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
+/* PAGE 6 UNITY */////////////////////////////
+.Container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+/* Each logo container */
+.olympic,
+.fifa,
+.badbunny {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  gap: 15px;
 }
 
 .logos img {
-  width: 50%;
-  height: 50%;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
- /* PAGE 8 */////////////////////////////
+.logoText {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* PAGE 7 CULTURAL EVENTS */////////////////////////////
+.Container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Each row alternates sides */
+.IconsRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* align left */
+.IconsRow:nth-child(odd) {
+  justify-content: flex-start;
+  margin-left: 25%;
+}
+
+/* align right */
+.IconsRow:nth-child(even) {
+  justify-content: flex-end;
+  margin-right: 25%;
+}
+
+.Icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Icons img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.IconText {
+  font-size: 16px;
+  color: #333;
+}
+
+ /* PAGE 8 MUSIC */////////////////////////////
 .background-container {
   position: absolute;
   top: 0;
@@ -146,7 +244,6 @@ section {
   object-fit: contain;
 }
 
-/* Main container - centered vertical layout */
 .split-container {
     display: flex;
     flex-direction: column;
@@ -374,11 +471,18 @@ audio {
 }
 
 .ENDheader {
-  font-family: 'PPFrama-Regular', sans-serif;
+  font-family: 'PPFrama-Regular', serif;
   text-align: center;
   justify-content: center;
   padding: 15px;
   color: floralwhite;
+}
+
+.ENDsubheader { font-size: 12px; 
+    text-align: center; 
+    color: floralwhite; 
+    margin-top: -10px;
+    font-family: 'PPFrama-Regular', sans-serif; 
 }
 
 .endtext {
@@ -390,12 +494,12 @@ audio {
   line-height: 1.6;
 }
 
-.ENDtranslate-icon {
+.Button-END {
   text-align: center;
   margin: 40px 0;
 }
 
-.ENDtranslate-icon a {
+.Button-END a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -409,7 +513,7 @@ audio {
   transition: all 0.3s ease;
 }
 
-.ENDtranslate-icon a:hover {
+.Button-END a:hover {
   background: rgba(255, 250, 240, 0.6);
   border-color: rgba(58, 74, 90, 0.5);
   transform: translateY(-2px);
