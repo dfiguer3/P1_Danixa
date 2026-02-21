@@ -7,11 +7,12 @@
   }, 2000);
 })();
 
-// when language changes to a longer string
-document.querySelector('.bg-text').classList.add('wrap-text');
-
-// when back to shorter text
-document.querySelector('.bg-text').classList.remove('wrap-text');
+// when language changes to a longer string (index.html only)
+var bgText = document.querySelector('.bg-text');
+if (bgText) {
+  bgText.classList.add('wrap-text');
+  bgText.classList.remove('wrap-text');
+}
 
 // Heart dot positions
 const dots = [
