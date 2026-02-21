@@ -7,7 +7,11 @@
   }, 2000);
 })();
 
+// when language changes to a longer string
+document.querySelector('.bg-text').classList.add('wrap-text');
 
+// when back to shorter text
+document.querySelector('.bg-text').classList.remove('wrap-text');
 
 // Heart dot positions
 const dots = [
@@ -132,7 +136,7 @@ function showComplete() {
 
   // Scatter earth and country flags on the card
   const card = document.getElementById('paperCard');
-  const symbols = ['🌍','🌎','🌏','🇺🇸','🇲🇽','🇯🇵','🇫🇷','🇩🇪','🇧🇷','🇮🇳','🇨🇦','🇦🇺','🇰🇷','🇬🇧','🇮🇹'];
+  const symbols = ['🌍','🌎','🌏','🇺🇸','🇲🇽','🇯🇵','🇫🇷','🇩🇪','🇧🇷','🇮🇳','🇨🇦','🇦🇺','🇰🇷','🇬🇧','🏳️‍🌈'];
   for (let i = 0; i < 8; i++) {
     const s = document.createElement('span');
     s.style.cssText = `position:absolute;font-size:${1.2+Math.random()*0.6}rem;
