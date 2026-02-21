@@ -106,3 +106,43 @@ body {
     transform: rotate(360deg);
     }
 }
+
+/* Responsive: index.html */
+@media (max-width: 768px) {
+  .section-bg {
+    padding: 0.5rem;
+  }
+  .bg-text {
+    font-size: clamp(20px, 5vw, 60px);
+  }
+  .container {
+    width: 80px;
+    height: 80px;
+    bottom: 24px;
+    right: 24px;
+  }
+  .translate-btn {
+    font-size: 18px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    min-height: 100vh;
+    padding: 0;
+  }
+  .bg-text {
+    font-size: clamp(16px, 4.5vw, 40px);
+  }
+  .container {
+    width: 60px;
+    height: 60px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .translate-btn {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+}
