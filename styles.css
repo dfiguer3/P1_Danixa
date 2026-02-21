@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GetaiGrotesk-Black';
+  src: url('assets/font/GetaiGrotesk-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,10 +36,10 @@ section {
 }
 
 .header {
-  font-family: 'PPFrama-Regular', sans-serif;
+  font-family: 'GetaiGrotesk-Black', sans-serif;
   text-align: center;
   padding: 20px;
-  color: #9B4F96;
+  color: #5C6344;
   background-color: floralwhite;
   position: fixed;
   top: 0;
@@ -461,6 +468,13 @@ audio {
 
 
   /* END PAGE */////////////////////////////
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 .endpg {
   display: flex;
   flex-direction: column;
@@ -471,7 +485,7 @@ audio {
 }
 
 .ENDheader {
-  font-family: 'PPFrama-Regular', serif;
+  font-family: 'GetaiGrotesk-Black', serif;
   text-align: center;
   justify-content: center;
   padding: 15px;

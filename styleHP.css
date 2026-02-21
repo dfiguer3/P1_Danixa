@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'PPFrama-Black';
-  src: url('./fonts/PPFrama-Black.otf') format('opentype');
+  src: url('assets/font/PPFrama-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GetaiGrotesk-Black';
+  src: url('assets/font/GetaiGrotesk-Black.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,14 +21,57 @@ body {
   background-color: floralwhite;
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.section-bg {
+  position: fixed;
+  padding-top: 0.65rem;
+  padding-right: 1rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.9rem;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-text {
+  margin: 0;
+  padding: 0;
+  line-height: 0.85;
+  font-size: clamp(30px, 6.18vw, 120px);
+  font-family: 'GetaiGrotesk-Black', sans-serif;
+  color: #1a0000;
+  opacity: 0.15;
+  user-select: none;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
 .container {
-  position: relative;
+  position: fixed;
+  bottom:40px;
+  right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
-  filter: blur(2px);
+  width: 100px;
+  height: 100px;
+  filter: blur(1.5px);
   animation: spin 5s linear infinite;
 }
 
@@ -40,7 +90,7 @@ body {
   border-radius: 20px;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'PPFrama-Black', sans-serif;
+  font-family: 'GetaiGrotesk-Black', sans-serif;
   cursor: pointer;
   z-index: 1;
   padding: 12px 24px;

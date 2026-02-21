@@ -5,21 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Connect the Dots</title>
       <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="stylesDOTS.css">
   </head>
 
 
 <body style="background-color: floralwhite;">
 
   <h1 class="header">
-    Connect the Dots
+    CONNECT THE DOTS
   </h1>
 
+
+  <div class="paper-card" id="paperCard">
+    <div class="tape tape-left"></div>
+    <div class="tape tape-right"></div>
+
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <div class="progress-area">
+      <span class="progress-text" id="progressText">click dot ① to begin</span>
+      <div class="progress-dots" id="progressDots"></div>
+    </div>
+
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-pink" onclick="restartShape()">↺ start over</button>
+  </div>
+
+  <p class="footer-note">we are all connected — just like the dots</p>
 
 
     <div class="Button">
         <a href="page2.html">Next Page ></a>
     </div>
+
+    <script src="scipts.js"></script>
   </body>
 </html>

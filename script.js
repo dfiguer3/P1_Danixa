@@ -1,186 +1,189 @@
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
-const completionOverlay = document.getElementById('completionOverlay');
-
-// Heart shape coordinates (normalized to canvas size)
-const heartPoints = [
-    { x: 300, y: 200 }, // Top center
-    { x: 250, y: 150 }, // Top left
-    { x: 200, y: 180 }, // Left curve
-    { x: 180, y: 220 }, // Left middle
-    { x: 200, y: 260 }, // Left bottom curve
-    { x: 250, y: 300 }, // Left bottom
-    { x: 300, y: 350 }, // Bottom center
-    { x: 350, y: 300 }, // Right bottom
-    { x: 400, y: 260 }, // Right bottom curve
-    { x: 420, y: 220 }, // Right middle
-    { x: 400, y: 180 }, // Right curve
-    { x: 350, y: 150 }, // Top right
+// Heart dot positions
+const dots = [
+  {x:200, y:338}, {x:143, y:277}, {x:88,  y:218},
+  {x:80,  y:155}, {x:107, y:108}, {x:158, y:88 },
+  {x:200, y:118}, {x:242, y:88 }, {x:293, y:108},
+  {x:320, y:155}, {x:312, y:218}, {x:257, y:277}
 ];
 
-const dotRadius = 12;
-const lineWidth = 4;
-const connectionRadius = 25;
-let connectedDots = [];
-let isDrawing = false;
-let currentDotIndex = -1;
-let gameComplete = false;
+const circleNums = ['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩','⑪','⑫'];
 
-// Colors
-const dotColor = '#8B4A6B'; // Pink
-const connectedDotColor = '#DB7093'; // Light pink
-const lineColor = '#A0826D'; // Earthy brown
-const backgroundColor = '#F5F5DC'; // Beige
+const canvas = document.getElementById('canvas');
+const ctx    = canvas.getContext('2d');
 
-function initGame() {
-    connectedDots = [];
-    isDrawing = false;
-    currentDotIndex = -1;
-    gameComplete = false;
-    completionOverlay.classList.remove('show');
-    draw();
-}
+let nextDot    = 0;
+let lines      = [];
+let complete   = false;
+
+// ── Draw ──────────────────────────────────────────────────────────────────
 
 function draw() {
-    // Clear canvas
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // Draw lines between connected dots
-    ctx.strokeStyle = lineColor;
-    ctx.lineWidth = lineWidth;
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-
-    for (let i = 0; i < connectedDots.length - 1; i++) {
-        const start = heartPoints[connectedDots[i]];
-        const end = heartPoints[connectedDots[i + 1]];
-        ctx.beginPath();
-        ctx.moveTo(start.x, start.y);
-        ctx.lineTo(end.x, end.y);
-        ctx.stroke();
+  // Paper background + dot grid
+  ctx.fillStyle = '#fffdf9';
+  ctx.fillRect(0, 0, 400, 400);
+  ctx.fillStyle = 'rgba(190,175,200,0.09)';
+  for (let x = 20; x < 400; x += 20)
+    for (let y = 20; y < 400; y += 20) {
+      ctx.beginPath(); ctx.arc(x, y, 0.8, 0, Math.PI*2); ctx.fill();
     }
 
-    // Draw dots
-    heartPoints.forEach((point, index) => {
-        const isConnected = connectedDots.includes(index);
-        const isCurrent = index === currentDotIndex;
+  // Lines
+  lines.forEach(({ from, to, done }) => {
+    const a = dots[from], b = dots[to];
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.strokeStyle = done ? '#8aacca' : '#c9748a';
+    ctx.lineWidth   = 2;
+    ctx.lineCap     = 'round';
+    ctx.globalAlpha = done ? 0.85 : 1;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  });
 
-        // Draw dot
-        ctx.beginPath();
-        ctx.arc(point.x, point.y, dotRadius, 0, Math.PI * 2);
-        ctx.fillStyle = isConnected ? connectedDotColor : dotColor;
-        ctx.fill();
-        
-        // Draw dot border
-        ctx.strokeStyle = '#5C3A2A';
-        ctx.lineWidth = 2;
-        ctx.stroke();
+  // Dots
+  dots.forEach((dot, i) => {
+    const isDone = i < nextDot;
+    const isNext = i === nextDot && !complete;
 
-        // Draw dot number
-        ctx.fillStyle = '#FFFFFF';
-        ctx.font = 'bold 14px Arial';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText((index + 1).toString(), point.x, point.y);
-    });
-
-    // Draw current connection line (if dragging)
-    if (isDrawing && currentDotIndex >= 0) {
-        const startPoint = heartPoints[currentDotIndex];
-        ctx.beginPath();
-        ctx.moveTo(startPoint.x, startPoint.y);
-        ctx.lineTo(canvas.mouseX || startPoint.x, canvas.mouseY || startPoint.y);
-        ctx.strokeStyle = lineColor;
-        ctx.lineWidth = lineWidth;
-        ctx.setLineDash([5, 5]);
-        ctx.stroke();
-        ctx.setLineDash([]);
+    // Glow ring on next dot
+    if (isNext) {
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, 16, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(201,116,138,0.14)';
+      ctx.fill();
     }
+
+    // Circle
+    ctx.beginPath();
+    ctx.arc(dot.x, dot.y, isDone ? 7 : 8.5, 0, Math.PI*2);
+    ctx.fillStyle   = isDone ? '#e0eef8' : '#fce8ee';
+    ctx.strokeStyle = isDone ? '#8aacca' : '#c9748a';
+    ctx.lineWidth   = 1.8;
+    ctx.fill();
+    ctx.stroke();
+
+    // Number
+    ctx.fillStyle    = isDone ? '#8aacca' : '#c9748a';
+    ctx.font         = `bold ${isDone ? 9 : 10}px Caveat, cursive`;
+    ctx.textAlign    = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(i + 1, dot.x, dot.y + 0.5);
+
+    // Hint sparkle above next dot
+    if (isNext) {
+      ctx.globalAlpha = 0.35;
+      ctx.font = '12px Caveat, cursive';
+      ctx.fillStyle = '#c9748a';
+      ctx.fillText('✦', dot.x, dot.y - 22);
+      ctx.globalAlpha = 1;
+    }
+  });
 }
 
-function getDotAtPosition(x, y) {
-    for (let i = 0; i < heartPoints.length; i++) {
-        const point = heartPoints[i];
-        const distance = Math.sqrt((x - point.x) ** 2 + (y - point.y) ** 2);
-        if (distance <= connectionRadius) {
-            return i;
-        }
-    }
-    return -1;
-}
+// ── Click handler ─────────────────────────────────────────────────────────
 
-function checkCompletion() {
-    if (connectedDots.length === heartPoints.length) {
-        // Check if all dots are connected in order
-        let allConnected = true;
-        for (let i = 0; i < heartPoints.length; i++) {
-            if (!connectedDots.includes(i)) {
-                allConnected = false;
-                break;
-            }
-        }
+canvas.addEventListener('click', e => {
+  if (complete) return;
 
-        if (allConnected) {
-            gameComplete = true;
-            setTimeout(() => {
-                completionOverlay.classList.add('show');
-            }, 500);
-        }
-    }
-}
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (400 / rect.width);
+  const my = (e.clientY - rect.top)  * (400 / rect.height);
 
-canvas.addEventListener('mousedown', (e) => {
-    if (gameComplete) return;
+  if (Math.hypot(mx - dots[nextDot].x, my - dots[nextDot].y) > 32) return;
 
-    const rect = canvas.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  if (nextDot > 0) lines.push({ from: nextDot - 1, to: nextDot });
+  nextDot++;
 
-    const dotIndex = getDotAtPosition(x, y);
-    
-    if (dotIndex === 0 || (connectedDots.length > 0 && dotIndex === connectedDots[connectedDots.length - 1] + 1)) {
-        if (dotIndex === 0 && connectedDots.length === 0) {
-            // Start from first dot
-            connectedDots.push(0);
-            currentDotIndex = 0;
-            isDrawing = true;
-        } else if (dotIndex === connectedDots[connectedDots.length - 1] + 1) {
-            // Connect to next dot
-            connectedDots.push(dotIndex);
-            currentDotIndex = dotIndex;
-            checkCompletion();
-        }
-        draw();
-    }
+  // Close the heart on last dot
+  if (nextDot >= dots.length) {
+    lines.push({ from: dots.length - 1, to: 0 });
+    lines = lines.map(l => ({ ...l, done: true }));
+    complete = true;
+    showComplete();
+  }
+
+  draw();
+  updateProgress();
+  updateProgressDots();
 });
 
-canvas.addEventListener('mousemove', (e) => {
-    if (!isDrawing || gameComplete) return;
+// ── Completion ────────────────────────────────────────────────────────────
 
-    const rect = canvas.getBoundingClientRect();
-    canvas.mouseX = e.clientX - rect.left;
-    canvas.mouseY = e.clientY - rect.top;
-    draw();
-});
+function showComplete() {
+  var banner = document.getElementById('completeBanner');
+  if (banner) banner.classList.add('show');
+  var msg = document.querySelector('.complete-msg');
+  if (msg) msg.textContent = '♡ love connects us all ♡';
+  const pt = document.getElementById('progressText');
+  pt.textContent = '✦ well done!';
+  pt.style.color = '#8aacca';
 
-canvas.addEventListener('mouseup', () => {
-    isDrawing = false;
-    draw();
-});
-
-canvas.addEventListener('mouseleave', () => {
-    isDrawing = false;
-    draw();
-});
-
-function restartGame() {
-    initGame();
+  // Scatter earth and country flags on the card
+  const card = document.getElementById('paperCard');
+  const symbols = ['🌍','🌎','🌏','🇺🇸','🇲🇽','🇯🇵','🇫🇷','🇩🇪','🇧🇷','🇮🇳','🇨🇦','🇦🇺','🇰🇷','🇬🇧','🇮🇹'];
+  for (let i = 0; i < 8; i++) {
+    const s = document.createElement('span');
+    s.style.cssText = `position:absolute;font-size:${1.2+Math.random()*0.6}rem;
+      left:${10+Math.random()*80}%;top:${10+Math.random()*80}%;
+      opacity:0;pointer-events:none;
+      transition:opacity 0.4s ${i*0.07}s,transform 0.6s ${i*0.07}s;
+      transform:scale(0);`;
+    s.textContent = symbols[i % symbols.length];
+    card.appendChild(s);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      s.style.opacity   = '0.35';
+      s.style.transform = `scale(1) rotate(${-20+Math.random()*40}deg)`;
+    }));
+  }
 }
 
-// Initialize game when DOM is loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGame);
-} else {
-    initGame();
+// ── Progress bar ──────────────────────────────────────────────────────────
+
+function updateProgress() {
+  if (complete) return;
+  const el = document.getElementById('progressText');
+  el.textContent = nextDot === 0
+    ? 'click dot ① to begin'
+    : `nice! now click dot ${circleNums[nextDot] || nextDot + 1}`;
 }
+
+function buildProgressDots() {
+  const container = document.getElementById('progressDots');
+  dots.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = `pd-${i}`;
+    container.appendChild(d);
+  });
+}
+
+function updateProgressDots() {
+  dots.forEach((_, i) => {
+    const el = document.getElementById(`pd-${i}`);
+    el.className = complete ? 'pdot done' : i < nextDot ? 'pdot filled' : 'pdot';
+  });
+}
+
+// ── Restart ───────────────────────────────────────────────────────────────
+
+function restartShape() {
+  nextDot  = 0;
+  lines    = [];
+  complete = false;
+  var b = document.getElementById('completeBanner');
+  if (b) b.classList.remove('show');
+  document.getElementById('progressText').textContent = 'click dot ① to begin';
+  document.getElementById('progressText').style.color = '#c9748a';
+  document.querySelectorAll('#paperCard > span').forEach(s => s.remove());
+  buildProgressDots();
+  updateProgressDots();
+  draw();
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────
+
+var sl = document.getElementById('shapeLabel');
+if (sl) sl.textContent = 'find the heart ♡';
+buildProgressDots();
+draw();
