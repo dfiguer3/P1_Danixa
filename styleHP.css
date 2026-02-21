@@ -50,7 +50,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 0.9;
-  font-size: clamp(11.5px, 11.5vw, 90px);
+  font-size: clamp(11.5px, 11.5vw, 85px);
   font-family: 'GetaiGrotesk-Black', sans-serif;
   color: #1a0000;
   opacity: 0.15;
