@@ -192,6 +192,7 @@ section {
     align-items: center;
     width: 100%;
     height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(100, 180, 255, 0.3));
 }
 
 
@@ -212,7 +213,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* Each logo container */
 .olympic,
 .fifa,
 .badbunny {
@@ -224,8 +224,8 @@ section {
 }
 
 .logos img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
@@ -257,69 +257,71 @@ section {
 
 /* PAGE 7 CULTURAL EVENTS */////////////////////////////
 .Container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
-/* Each row alternates sides */
-.IconsRow {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-/* align left */
-.IconsRow:nth-child(odd) {
-  justify-content: flex-start;
-  margin-left: 25%;
-}
-
-/* align right */
-.IconsRow:nth-child(even) {
-  justify-content: flex-end;
-  margin-right: 25%;
-}
-
-.Icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Icons img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-}
-
-.IconText {
-  font-size: 16px;
+.overview-text {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
   color: #1a0000;
   opacity: 0.50;
 }
 
+.imgs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.tomato,
+.carnival,
+.holi,
+.beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  gap: 15px;
+}
+
+.imgs img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.logoText {
+  font-size: 14px;
+  color: #1a0000;
+  opacity: 0.50;
+  font-family: 'PPFrama-Regular', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
-  .Container { max-width: 95%; padding: 16px; }
-  .IconsRow { margin-bottom: 28px; }
-  .IconsRow:nth-child(odd) { margin-left: 10%; }
-  .IconsRow:nth-child(even) { margin-right: 10%; }
-  .Icons img { width: 120px; height: 120px; }
-  .IconText { font-size: 14px; }
+  .Container { padding: 16px; max-width: 95%; }
+  .imgs { gap: 28px; margin: 28px auto; }
+  .imgs img { width: 120px; height: 120px; }
+  .olympic, .fifa, .badbunny { max-width: 260px; }
+  .logoText { font-size: 13px; }
 }
 
 @media (max-width: 480px) {
-  .IconsRow {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-  .IconsRow:nth-child(odd),
-  .IconsRow:nth-child(even) { margin-left: 0; margin-right: 0; justify-content: center; }
-  .Icons img { width: 100px; height: 100px; }
-  .IconText { font-size: 13px; }
+  .Container { padding: 12px; }
+  .imgs { gap: 20px; margin: 20px auto; flex-direction: column; align-items: center; }
+  .imgs img { width: 100px; height: 100px; }
+  .logoText { font-size: 12px; }
 }
 
  /* PAGE 8 MUSIC */////////////////////////////
@@ -353,7 +355,7 @@ section {
     min-height: 50vh;
 }
 
-/* Top - Spinning record (centered) */
+/* spinning record */
 .left-image {
     display: flex;
     justify-content: center;
@@ -393,14 +395,12 @@ section {
     }
 }
 
-/* Hide radio buttons but keep them functional */
 .split-container > input[type="radio"] {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 
-/* Bottom - Music buttons */
 .music-buttons {
     display: flex;
     flex-direction: row;
@@ -410,12 +410,10 @@ section {
     flex-wrap: wrap;
 }
 
-/* Label styling */
 .music-buttons label {
     cursor: pointer;
 }
 
-/* Image button styling */
 .button-wrapper {
     position: relative;
     cursor: pointer;
@@ -440,7 +438,6 @@ section {
     object-fit: cover;
 }
 
-/* Active state when selected - targets labels connected to checked inputs */
 #song1:checked ~ .music-buttons label[for="song1"] .button-wrapper img,
 #song2:checked ~ .music-buttons label[for="song2"] .button-wrapper img,
 #song3:checked ~ .music-buttons label[for="song3"] .button-wrapper img,
@@ -450,7 +447,6 @@ section {
     transform: scale(1.05);
 }
 
-/* Hide play overlay when song is selected */
 #song1:checked ~ .music-buttons label[for="song1"] .play-overlay,
 #song2:checked ~ .music-buttons label[for="song2"] .play-overlay,
 #song3:checked ~ .music-buttons label[for="song3"] .play-overlay,
@@ -458,7 +454,6 @@ section {
     display: none;
 }
 
-/* Song title above image */
 .button-wrapper span {
     display: block;
     text-align: center;
@@ -470,7 +465,6 @@ section {
     letter-spacing: 1px;
 }
 
-/* Play overlay */
 .play-overlay {
   position: absolute;
   top: 50%;
@@ -478,7 +472,7 @@ section {
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  background: rgba(155, 79, 150, 0.9);
+  background: #5C6344;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -488,7 +482,6 @@ section {
   pointer-events: none;
 }
 
-/* Play icon */
 .play-icon {
   width: 0;
   height: 0;
@@ -498,7 +491,6 @@ section {
   margin-left: 3px;
 }
 
-/* Audio player - FIXED SELECTORS */
 .audio-player {
   display: none;
   position: fixed;
@@ -512,7 +504,6 @@ section {
   z-index: 1000;
 }
 
-/* ✅ FIXED: Now targets inputs as siblings */
 #song1:checked ~ .audio-player.player1,
 #song2:checked ~ .audio-player.player2,
 #song3:checked ~ .audio-player.player3,
@@ -526,13 +517,13 @@ audio {
 
 .now-playing {
   font-family: 'PPFrama-Regular', sans-serif;
-  color: #9B4F96;
+  color: #5C6344;
   margin-bottom: 10px;
   text-align: center;
   font-size: 14px;
 }
 
-/* Responsive: PAGE 8 Music */
+/* PAGE 8 Music */
 @media (max-width: 768px) {
   .split-container {
     gap: 32px;

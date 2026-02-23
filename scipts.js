@@ -203,3 +203,24 @@ var sl = document.getElementById('shapeLabel');
 if (sl) sl.textContent = 'find the heart ♡';
 buildProgressDots();
 draw();
+
+
+// ── music buttons ──────────────────────────────────────────────────────────────────
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.audio-player') && !e.target.closest('.music-buttons')) {
+    document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+      radio.checked = false;
+    });
+  }
+});
+
+document.querySelectorAll('.music-buttons label').forEach(function(label) {
+  label.addEventListener('click', function() {
+    const radio = document.getElementById(label.getAttribute('for'));
+    if (radio && radio.checked) {
+      setTimeout(function() {
+        radio.checked = false;
+      }, 10);
+    }
+  });
+});
