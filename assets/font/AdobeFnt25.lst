@@ -30,6 +30,33 @@ NameArray:0,Win,16,Cakra
 
 %BeginFont
 Handler:DirectoryHandler
+FontType:Type1
+FontName:DTGetaiGroteskDisplay-Black
+FamilyName:DT Getai Grotesk Display 
+StyleName:Black
+FullName:DT Getai Grotesk Display 
+MenuName:DT Getai Grotesk Display Black
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\danif\OneDrive\Desktop\Websites 256\P1_Danixa\assets\Font\GetaiGrotesk-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:21708
+FileModTime:1771531478
+WeightClass:900
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,DT Getai Grotesk Display 
+NameArray:0,Win,1,DT Getai Grotesk Display Black
+NameArray:0,Win,16,DT Getai Grotesk Display 
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
 FontType:TrueType
 FontName:PhospheneFont-Regular
 FamilyName:Phosphène Font
