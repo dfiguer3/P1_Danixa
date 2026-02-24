@@ -10,7 +10,9 @@
   </head>
 
 
-<body style="background-image: url('assets/reach.gif'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"><div class="endpg">
+<body style="background-color: floralwhite;">
+
+  <div class="endpg">
 
 <h1 class="ENDheader"> 
   NO TRANSLATION NEEDED
@@ -36,5 +38,30 @@
         <a href="index.html">Back to Home ></a>
       </div>
 
+<script src="scipts.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('.ENDheader');
+    if (!header) return;
+
+    var phrases = [
+      'NO TRANSLATION NEEDED',                // English
+      'PAS BESOIN DE TRADUCTION',             // French
+      'NO SE NECESITA TRADUCCIÓN',            // Spanish
+      'KEINE ÜBERSETZUNG NÖTIG',              // German
+      'NESSUNA TRADUZIONE NECESSARIA',        // Italian
+      'NENHUMA TRADUÇÃO NECESSÁRIA',          // Portuguese
+      '翻訳不要',                              // Japanese
+      '번역이 필요 없습니다',                   // Korean
+      'لا حاجة للترجمة'                        // Arabic
+    ];
+
+    var index = 0;
+    setInterval(function () {
+      index = (index + 1) % phrases.length;
+      header.textContent = phrases[index];
+    }, 2500);
+  });
+</script>
   </body>
 </html>
