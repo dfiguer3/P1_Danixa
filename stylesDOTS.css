@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'PPFrama-Regular';
-  src: url('/P1_Danixa/fonts/PPFrama-Regular.otf') format('opentype');
+  src: url('asstes/font/PPFrama-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPFrama-Black';
-  src: url('/P1_Danixa/fonts/PPFrama-Black.otf') format('opentype');
+  src: url('asstes/font/PPFrama-Black.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
