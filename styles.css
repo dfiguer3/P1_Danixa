@@ -181,15 +181,9 @@ section {
 .image-text {
   font-size: 16px;
   font-weight: normal;
+  color: #1a0000;
+  opacity: 0.50;
   font-family: 'PPFrama-Regular', sans-serif;
-  background-image: url('assets/together.jpg');
-  background-size: cover;
-  background-position: center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  -webkit-text-stroke: 0.5px rgba(20, 0, 0, 0.25);
 }
 
 .glasses {

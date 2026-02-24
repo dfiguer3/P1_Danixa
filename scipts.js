@@ -137,7 +137,7 @@ function showComplete() {
 
   // Scatter earth and country flags on the card
   const card = document.getElementById('paperCard');
-  const symbols = ['🌍','🌎','🌏','🇺🇸','🇲🇽','🇯🇵','🇫🇷','🇩🇪','🇧🇷','🇮🇳','🇨🇦','🇦🇺','🇰🇷','🇬🇧','🏳️‍🌈'];
+  const symbols = ['🌍','🌎','🌏','🫶','🗽','🌮','🏯','🏝️','🕍','🗿','🫔','🥐','🍛','🦘','🏳️‍🌈'];
   for (let i = 0; i < 8; i++) {
     const s = document.createElement('span');
     s.style.cssText = `position:absolute;font-size:${1.2+Math.random()*0.6}rem;
@@ -166,6 +166,8 @@ function updateProgress() {
 
 function buildProgressDots() {
   const container = document.getElementById('progressDots');
+  // clear any existing dots so we don't keep adding more on restart
+  container.innerHTML = '';
   dots.forEach((_, i) => {
     const d = document.createElement('div');
     d.className = 'pdot';
@@ -191,7 +193,8 @@ function restartShape() {
   if (b) b.classList.remove('show');
   document.getElementById('progressText').textContent = 'click dot ① to begin';
   document.getElementById('progressText').style.color = '#c9748a';
-  document.querySelectorAll('#paperCard > span').forEach(s => s.remove());
+  // remove decorative completion symbols but keep the shape label
+  document.querySelectorAll('#paperCard > span:not(#shapeLabel)').forEach(s => s.remove());
   buildProgressDots();
   updateProgressDots();
   draw();

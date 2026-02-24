@@ -76,7 +76,8 @@ body::before {
 .page-title {
   font-family: 'PPFrama-Regular', sans-serif;
   font-size: clamp(3rem, 8vw, 4.5rem);
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   line-height: 1;
   transform: rotate(-1.2deg);
   display: block;
@@ -86,7 +87,8 @@ body::before {
 .page-subtitle {
   font-family: 'PPFrama-Regular', sans-serif;
   font-size: clamp(1rem, 3vw, 1.25rem);
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   transform: rotate(0.6deg);
   display: block;
   margin-top: 4px;
@@ -132,7 +134,8 @@ body::before {
 .shape-label {
   font-family: "beth-ellen", sans-serif;
   font-size: 1rem;
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   display: block;
   text-align: center;
   margin-bottom: 10px;
@@ -157,7 +160,8 @@ canvas {
 .progress-text {
   font-family: 'PPFrama-Regular', sans-serif;
   font-size: 1.15rem;
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   transform: rotate(-0.4deg);
   display: block;
   transition: color 0.4s;
