@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'PPFrama-Regular';
-  src: url('asstes/font/PPFrama-Regular.otf') format('opentype');
+  src: url('assets/font/frama/PPFrama-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPFrama-Black';
-  src: url('asstes/font/PPFrama-Black.otf') format('opentype');
+  src: url('assets/font/frama/PPFrama-Black.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -59,7 +59,8 @@ body::before {
   font-family: 'GetaiGrotesk-Black', sans-serif;
   text-align: center;
   padding: 20px;
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   background-color: floralwhite;
   position: fixed;
   top: 0;
@@ -129,8 +130,8 @@ body::before {
 }
 
 .shape-label {
-  font-family: 'PPFrama-Regular', sans-serif;
-  font-size: 1.7rem;
+  font-family: "beth-ellen", sans-serif;
+  font-size: 1rem;
   color: #5C6344;
   display: block;
   text-align: center;
@@ -141,7 +142,7 @@ body::before {
 
 canvas {
   display: block;
-  cursor: crosshair;
+  cursor: pointer;
   width: min(380px, 88vw);
   height: min(380px, 88vw);
 }
@@ -220,6 +221,7 @@ canvas {
 
 .btn {
   font-family: 'PPFrama-Black', sans-serif;
+  opacity: 0.5;
   font-size: 1.1rem;
   background: none;
   border-radius: 20px;
@@ -244,22 +246,11 @@ canvas {
   transform: scale(1.04) rotate(1deg);
 }
 
-/* === FOOTER NOTE === */
-.footer-note {
-  margin-top: 26px;
-  font-family: 'Caveat', cursive;
-  font-size: 1rem;
-  color: #5C6344;
-  text-align: center;
-  font-style: italic;
-  opacity: 0.75;
-  transform: rotate(0.5deg);
-}
 
 /* Decorative side annotations */
 .annotation {
   position: absolute;
-  font-family: 'Reenie Beanie', cursive;
+  font-family: 'beth-ellen', cursive;
   font-size: 1rem;
   opacity: 0.25;
   pointer-events: none;
@@ -286,7 +277,8 @@ canvas {
   gap: 6px;
   padding: 10px 16px;
   background: transparent;
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   border: 1px solid rgba(255, 250, 240, 0.3);
   border-radius: 20px;
   text-decoration: none;
@@ -299,3 +291,5 @@ canvas {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+

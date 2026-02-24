@@ -50,6 +50,8 @@ section {
   padding: 20px;
 }
 
+
+
 /* Responsive: shared (page2–8, lastpage) */
 @media (max-width: 992px) {
   body { padding-top: 76px; }
@@ -83,11 +85,14 @@ section {
   .Button a { padding: 6px 12px; font-size: 0.9rem; }
 }
 
+
+
 .header {
   font-family: 'GetaiGrotesk-Black', sans-serif;
   text-align: center;
   padding: 20px;
-  color: #5C6344;
+  color: #1a0000;
+  opacity: 0.50;
   background-color: floralwhite;
   position: fixed;
   top: 0;
@@ -152,7 +157,8 @@ section {
   font-family: 'PPFrama-Regular', sans-serif;
   text-align: center;
   padding: 15px;
-  color: #9B4F96;
+  color: #1a0000;
+  opacity: 0.50;
   background-color: floralwhite;
   position: fixed;
   top: 0;
@@ -174,15 +180,16 @@ section {
 
 .image-text {
   font-size: 16px;
-  font-weight: bolder;
+  font-weight: normal;
   font-family: 'PPFrama-Regular', sans-serif;
   background-image: url('assets/together.jpg');
   background-size: cover;
   background-position: center;
   background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  -webkit-text-stroke: 0.5px rgba(20, 0, 0, 0.25);
 }
 
 .glasses {
@@ -240,6 +247,8 @@ section {
   line-height: 1.6;
 }
 
+
+
 @media (max-width: 768px) {
   .Container { padding: 16px; max-width: 95%; }
   .logos { gap: 28px; margin: 28px auto; }
@@ -255,21 +264,14 @@ section {
   .logoText { font-size: 12px; }
 }
 
+
+
 /* PAGE 7 CULTURAL EVENTS */////////////////////////////
 .Container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
-}
-
-.overview-text {
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #1a0000;
-  opacity: 0.50;
 }
 
 .imgs {
@@ -309,6 +311,8 @@ section {
   line-height: 1.6;
 }
 
+
+
 @media (max-width: 768px) {
   .Container { padding: 16px; max-width: 95%; }
   .imgs { gap: 28px; margin: 28px auto; }
@@ -323,6 +327,9 @@ section {
   .imgs img { width: 100px; height: 100px; }
   .logoText { font-size: 12px; }
 }
+
+
+
 
  /* PAGE 8 MUSIC */////////////////////////////
 .background-container {
@@ -459,36 +466,11 @@ section {
     text-align: center;
     margin-bottom: 10px;
     font-family: 'PPFrama-Regular', sans-serif;
-    color: #3A4A5A;
+    color: #1a0000;
+    opacity: 0.50;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.play-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background: #5C6344;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.play-icon {
-  width: 0;
-  height: 0;
-  border-left: 15px solid white;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  margin-left: 3px;
 }
 
 .audio-player {
@@ -523,7 +505,10 @@ audio {
   font-size: 14px;
 }
 
-/* PAGE 8 Music */
+
+
+
+
 @media (max-width: 768px) {
   .split-container {
     gap: 32px;
@@ -587,7 +572,7 @@ audio {
     text-align: center; 
     color: floralwhite; 
     margin-top: -10px;
-    font-family: 'PPFrama-Regular', sans-serif; 
+    font-family: 'beth-ellen', cursive; 
 }
 
 .endtext {

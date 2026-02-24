@@ -81,7 +81,7 @@ function draw() {
 
     // Number
     ctx.fillStyle    = isDone ? '#8aacca' : '#c9748a';
-    ctx.font         = `bold ${isDone ? 9 : 10}px Caveat, cursive`;
+    ctx.font         = `bold ${isDone ? 9 : 10}px beth ellen, cursive`;
     ctx.textAlign    = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(i + 1, dot.x, dot.y + 0.5);
@@ -89,7 +89,7 @@ function draw() {
     // Hint sparkle above next dot
     if (isNext) {
       ctx.globalAlpha = 0.35;
-      ctx.font = '12px Caveat, cursive';
+      ctx.font = '12px beth ellen, cursive';
       ctx.fillStyle = '#c9748a';
       ctx.fillText('✦', dot.x, dot.y - 22);
       ctx.globalAlpha = 1;
@@ -200,7 +200,7 @@ function restartShape() {
 // ── Init ──────────────────────────────────────────────────────────────────
 
 var sl = document.getElementById('shapeLabel');
-if (sl) sl.textContent = 'find the heart ♡';
+if (sl) sl.textContent = 'we are all connected - just like the dots';
 buildProgressDots();
 draw();
 
