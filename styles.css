@@ -584,7 +584,7 @@ body::before {
 }
 
 .ENDheader {
-  font-family: 'GetaiGrotesk-Black', serif;
+  font-family: 'GetaiGrotesk-Black', sans-serif;
   text-align: center;
   justify-content: center;
   padding: 15px;
